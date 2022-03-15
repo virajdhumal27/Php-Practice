@@ -7,6 +7,7 @@
     <title>Practical 5 | Factorial of number</title>
 </head>
 <body>
+    <h1>Factorial of a number.</h1>
     <?php
 
     $n = 5;
@@ -15,7 +16,7 @@
         $ans = $ans * $i;
     }
 
-    echo "Factorial $n is $ans <br>";
+    echo "Factorial of $n is $ans <br>";
     ?>
 </body>
 </html>
