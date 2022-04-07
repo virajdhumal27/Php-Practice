@@ -6,42 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical 5 | Sorting an array</title>
-    <style>
-        * {
-            font-size: 30px;
-        }
-    </style>
+
 </head>
 
 <body>
 
-    <?php
+    <form action="" method="post">
+        <label>Enter the numbers:</label>
+        <input type="text" name="arrText" placeholder="Enter comma separated values" />
 
-    $numbers = array(20, 10, 30, 0, 50);
+        <br /><br />
+        <input type="submit" name="sort" value="sort" />
+        <br /><br />
+    </form>
+
+    <?php
     if (isset($_POST['sort'])) {
-        sort($numbers);
-    } elseif (isset($_POST['add'])) {
-        $elementToInsert = $_POST['adddedElement'];
-        // array_push($numbers, $elementToInsert);
-        $numbers[] = $elementToInsert;
+        $text = $_POST['arrText'];
+        $arr = array_map('intval', explode(",", $text));
+        $n = count($arr);
+
+        echo "Before Sorting: <br/>";
+        displayArray($arr);
+
+        for ($i = 0; $i < $n; $i++) {
+            for ($j = $i + 1; $j < $n; $j++) {
+                if ($arr[$i] > $arr[$j]) {
+                    swap($arr, $i, $j);
+                }
+            }
+        }
+        echo "After Sorting: <br/>";
+        displayArray($arr);
+    }
+
+    function swap(&$arr, $i, $j)
+    {
+        $arr[$i] = $arr[$i] ^ $arr[$j];
+        $arr[$j] = $arr[$i] ^ $arr[$j];
+        $arr[$i] = $arr[$i] ^ $arr[$j];
+    }
+
+    function displayArray(&$arr)
+    {
+        foreach ($arr as $key) {
+            echo $key . "<br />";
+        }
     }
     ?>
-
-    <form action="" method="post">
-        <p id="arrayElements">Array:
-            <?php
-            foreach ($numbers as $num) {
-                echo "$num ";
-            }
-            ?>
-        </p>
-
-        <input type="submit" value="Sort" name="sort" />
-
-        <p><input type="text" name="adddedElement"/>
-        <input type="submit" value="Add" name="add" />
-        </p>
-    </form>
 
 </body>
 
