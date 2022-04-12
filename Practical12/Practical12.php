@@ -8,7 +8,7 @@ and open the template in the editor.
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Practical 12</title>
 </head>
 
 <body>
