@@ -2,13 +2,15 @@
 <?php
 date_default_timezone_set("Asia/kolkata");
 echo "This time is " . date("h:i:sa") . "<br /><br />";
-$time = date('s');
+$time = date('h');
 $color = "";
 
 if ($time == 4 || $time == 8 || $time == 2) {
     $color = "Red";
 } elseif ($time == 1 || $time == 3 || $time == 7) {
     $color = "Green";
+} elseif ($time == 5 || $time == 6 || $time == 12) {
+    $color = "Pink";
 } else {
     $color = "Yellow";
 }
