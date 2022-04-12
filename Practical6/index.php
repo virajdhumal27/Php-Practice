@@ -8,12 +8,14 @@ and open the template in the editor.
 
 <head>
     <meta charset="UTF-8">
-    <title>Practical 6</title>
+    <title>Practical 6 | Arithmatic Operations</title>
     <style>
-        table, input {
+        table,
+        input {
             font-size: 1.5rem;
             text-align: center;
         }
+
         .center {
             display: flex;
             justify-content: center;
@@ -32,30 +34,37 @@ and open the template in the editor.
     $ans = "";
 
     if (isset($_POST['Add'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = add($firstNumber, $secondNumber);
     } elseif (isset($_POST['Subtract'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = subtract($firstNumber, $secondNumber);
     } elseif (isset($_POST['Multiply'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = multiply($firstNumber, $secondNumber);
     } elseif (isset($_POST['Divide'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = divide($firstNumber, $secondNumber);
     } elseif (isset($_POST['Module'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = module($firstNumber, $secondNumber);
     } elseif (isset($_POST['Exponent'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = exponent($firstNumber, $secondNumber);
     } elseif (isset($_POST['Average'])) {
+
         $firstNumber = $_POST['txtFirstNumber'];
         $secondNumber = $_POST['txtSecondNumber'];
         $ans = average($firstNumber, $secondNumber);
