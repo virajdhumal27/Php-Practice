@@ -11,9 +11,15 @@
 <body>
     <div>
         <h1>Check a number is prime or not</h1>
+        <form action="" method="post">
+            <label>Enter a number:</label>
+            <input type="text" name="input" />
+            <input type="submit" name="submit" value="Submit" /><br /><br />
+        </form>
 
         <?php
-            $n = 11;
+        if (isset($_POST['submit'])) {
+            $n = $_POST['input'];
             $isPrime = true;
             $i = 2;
 
@@ -30,6 +36,8 @@
             } else {
                 echo 'The number ' . $n . ' is not prime number';
             }
+        }
+
         ?>
     </div>
 </body>
