@@ -11,11 +11,27 @@
 <body>
     <div>
         <h1>Sum of digits</h1>
+
+        <form action="" method="post">
+            <label>Enter a number:</label>
+            <input type="text" name="input" />
+            <input type="submit" name="submit" value="Submit" /><br/><br/>
+        </form>
+
         <?php
-            $n1 = 5;
-            $n2 = 10;
-            $ans = $n1 + $n2;
-            echo 'Sum of digits: ' . $ans;
+        if(isset($_POST['submit'])) {
+            $num = $_POST['input'];
+            $n = $num;
+            $result = 0;
+
+            while ($n != 0) {
+                $rem = $n % 10;
+                $result += $rem;
+                $n /= 10;
+            }
+
+            echo "Sum of digits of $num is ".$result;
+        }
         ?>
     </div>
 </body>
