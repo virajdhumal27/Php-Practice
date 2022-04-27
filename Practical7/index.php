@@ -2,7 +2,7 @@
 <?php
 date_default_timezone_set("Asia/kolkata");
 echo "This time is " . date("h:i:sa") . "<br /><br />";
-$time = date('h');
+$time = date('s');
 $color = "";
 
 if ($time == 4 || $time == 8 || $time == 2) {
