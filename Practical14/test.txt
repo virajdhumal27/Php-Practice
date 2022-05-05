@@ -1,0 +1,9 @@
+This is Practical 14 test file to read.
+
+Some Abbreviations:
+OOPS - Object Oriented Programming System.
+DB - Database.
+DRY - Don't Repeat Yourself.
+KISS - Keep It Simple, Stupid / Keep It Super Simple.
+API - Application Program Interface.
+DNS - Domain Name Server.
